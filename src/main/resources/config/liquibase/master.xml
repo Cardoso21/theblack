@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="config/liquibase/changelogs/202210211535_create_table_situacao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211537_create_table_motivos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211538_create_table_pagamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211540_insert_tabela_pagamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211542_insert_table_situacao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211543_create_table_evento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211544_create_table_usuario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211547_create_table_relac_usuario_envento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211548_FKs_relac_usuario-evento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202210211549_FK_pagamento_usuario.xml" relativeToChangelogFile="false"/>
+
+
+
+
+
+
+</databaseChangeLog>
