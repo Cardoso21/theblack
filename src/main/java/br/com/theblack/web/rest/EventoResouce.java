@@ -25,7 +25,7 @@ import lombok.RequiredArgsConstructor;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("api/evento")
+@RequestMapping("/api/evento")
 @RequiredArgsConstructor
 public class EventoResouce {
     private  EventoService eventoService;

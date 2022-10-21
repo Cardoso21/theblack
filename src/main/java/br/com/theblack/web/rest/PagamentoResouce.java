@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 @CrossOrigin(origins = "*")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/pagameto")
+@RequestMapping("/api/pagameto")
 public class PagamentoResouce {
 	
 	private PagamentoService pagamentoService;

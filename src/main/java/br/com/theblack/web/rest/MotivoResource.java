@@ -24,7 +24,7 @@ import lombok.RequiredArgsConstructor;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("api/motivo")
+@RequestMapping("/api/motivo")
 @RequiredArgsConstructor
 public class MotivoResource {
 
