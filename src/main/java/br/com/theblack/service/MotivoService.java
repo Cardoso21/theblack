@@ -1,33 +1,33 @@
 package br.com.theblack.service;
 
-import java.util.List;
-
-import javax.transaction.Transactional;
-
-import org.springframework.stereotype.Service;
 
 import br.com.theblack.dominio.Motivo;
 import br.com.theblack.repository.MotivoRepository;
-import br.com.theblack.service.DTO.MotivoDTO;
-import br.com.theblack.service.DTO.SelectDTO;
+import br.com.theblack.service.dto.MotivoDTO;
+import br.com.theblack.service.dto.SelectDTO;
 import br.com.theblack.service.exception.RegraNegocioException;
 import br.com.theblack.service.mapper.MotivoMapper;
 import br.com.theblack.service.mapper.MotivoSelectmapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
 @Transactional
 public class MotivoService {
 
-   private  MotivoRepository motivoRepository;
-   private  EventoService eventoService;
-   private  MotivoMapper motivoMapper;
-   private  MotivoSelectmapper motivoSelectmapper;
+   private final MotivoRepository motivoRepository;
+   private final EventoService eventoService;
+   private final MotivoMapper motivoMapper;
+   private final MotivoSelectmapper motivoSelectmapper;
 
-    public List<MotivoDTO> exibirTodosMotivos(){
-        return motivoMapper.toDto(motivoRepository.findAll());
-    }
+   public List<MotivoDTO> exibirTodosMotivos(){
+       return motivoMapper.toDto(motivoRepository.findAll());
+   }
+
    public MotivoDTO exibirMotivoPorId(Long id){
        Motivo motivo = motivoRepository.findById(id).orElseThrow(() -> new RegraNegocioException("Motivo não existe"));
        return motivoMapper.toDto(motivo);
@@ -51,4 +51,3 @@ public class MotivoService {
 
    }
 }
-

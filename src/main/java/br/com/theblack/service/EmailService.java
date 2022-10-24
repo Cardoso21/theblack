@@ -1,19 +1,17 @@
 package br.com.theblack.service;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import javax.transaction.Transactional;
-
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.stereotype.Service;
-
 import br.com.theblack.config.ApplicationProperties;
-import br.com.theblack.service.DTO.EmailDTO;
+import br.com.theblack.service.dto.EmailDTO;;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.SneakyThrows;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.stereotype.Service;
+
+import javax.mail.internet.MimeMessage;
+import javax.transaction.Transactional;
 
 @Getter
 @Setter
@@ -22,11 +20,11 @@ import lombok.SneakyThrows;
 @Transactional
 public class EmailService {
 
-    private  JavaMailSender javaMailSender;
-    private  ApplicationProperties applicationProperties;
+    private final JavaMailSender javaMailSender;
+    private final ApplicationProperties applicationProperties;
 
     @SneakyThrows
-    public void enviaEmail(EmailDTO dto) throws MessagingException{
+    public void enviaEmail(EmailDTO dto){
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper mime = new MimeMessageHelper(message, false, "UTF-8");
         mime.setTo(dto.getDestinatario());

@@ -1,19 +1,17 @@
 package br.com.theblack.service.filter;
 
-import java.util.ArrayList;
-import java.util.List;
+import br.com.theblack.dominio.Usuario;
+import br.com.theblack.dominio.Usuario_;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-
-import org.springframework.data.jpa.domain.Specification;
-
-import br.com.theblack.dominio.Usuario;
-import br.com.theblack.dominio.Usuario_;
-import lombok.Getter;
-import lombok.Setter;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,6 +19,7 @@ public class UsuarioFilter implements EntityFilter<Usuario> {
 
     private String nome;
     private String cargo;
+    private String cpf;
     private Boolean status;
 
     @Override
@@ -37,7 +36,7 @@ public class UsuarioFilter implements EntityFilter<Usuario> {
         }
 
         if(cargo!=null){
-            predicates.add(cb.like(root.join("pagamento").get("p"), "%" + cargo + "%"));
+            predicates.add(cb.like(root.join("cargo").get("cargo"), "%" + cargo + "%"));
         }
 
         if (status!=null){

@@ -1,20 +1,18 @@
 package br.com.theblack.service.filter;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import br.com.theblack.dominio.Evento;
+import br.com.theblack.dominio.Evento_;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-
-import org.springframework.data.jpa.domain.Specification;
-
-import br.com.theblack.dominio.Evento;
-import br.com.theblack.dominio.Evento_;
-import lombok.Getter;
-import lombok.Setter;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter

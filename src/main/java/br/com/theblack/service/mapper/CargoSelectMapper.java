@@ -1,6 +1,6 @@
 package br.com.theblack.service.mapper;
 
-import br.com.theblack.dominio.Motivo;
+import br.com.theblack.dominio.Cargo;
 import br.com.theblack.service.dto.SelectDTO;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -8,12 +8,13 @@ import org.mapstruct.Mapping;
 
 
 @Mapper(componentModel = "spring", uses = {})
-public interface MotivoSelectmapper extends EntityMapper<SelectDTO, Motivo> {
+public interface CargoSelectMapper extends EntityMapper<SelectDTO, Cargo>{
+
 
     @Mapping(source = "id", target = "value")
-    @Mapping(source = "motivo", target = "label")
-    SelectDTO toDto(Motivo motivo);
+    @Mapping(source = "cargo", target = "label")
+    SelectDTO toDto(Cargo cargo);
 
     @InheritInverseConfiguration
-    Motivo toEntity(SelectDTO selectDTO);
+    Cargo toEntity(SelectDTO selectDTO);
 }

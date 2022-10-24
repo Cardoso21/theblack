@@ -1,32 +1,30 @@
 package br.com.theblack.service;
 
-import java.util.List;
-
-import javax.transaction.Transactional;
-
-import org.springframework.stereotype.Service;
-
 import br.com.theblack.dominio.Usuario;
 import br.com.theblack.repository.UsuarioRepository;
-import br.com.theblack.service.DTO.SelectDTO;
-import br.com.theblack.service.DTO.UsuarioDTO;
-import br.com.theblack.service.DTO.UsuarioListagemDTO;
+import br.com.theblack.service.dto.SelectDTO;
+import br.com.theblack.service.dto.UsuarioDTO;
+import br.com.theblack.service.dto.UsuarioListagemDTO;
 import br.com.theblack.service.exception.RegraNegocioException;
 import br.com.theblack.service.filter.UsuarioFilter;
 import br.com.theblack.service.mapper.UsuarioListagemMapper;
 import br.com.theblack.service.mapper.UsuarioMapper;
 import br.com.theblack.service.mapper.UsuarioSelectMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
 @Transactional
 public class UsuarioService {
-    private  UsuarioRepository usuarioRepository;
-    private  EventoService eventoService;
-    private  UsuarioMapper usuarioMapper;
-    private  UsuarioListagemMapper usuarioListagemMapper;
-    private  UsuarioSelectMapper usuarioSelectMapper;
+    private final UsuarioRepository usuarioRepository;
+    private final EventoService eventoService;
+    private final UsuarioMapper usuarioMapper;
+    private final UsuarioListagemMapper usuarioListagemMapper;
+    private final UsuarioSelectMapper usuarioSelectMapper;
     
     public List<UsuarioListagemDTO> mostrarTodosUsuariosFiltrado(UsuarioFilter filtro) {
         return usuarioListagemMapper.toDto(usuarioRepository.findAll(filtro.filtrar()));

@@ -1,9 +1,10 @@
 package br.com.theblack.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import br.com.theblack.dominio.Motivo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface MotivoRepository extends JpaRepository<Motivo,Long>{
+@Repository
+public interface MotivoRepository extends JpaRepository<Motivo, Long> {
 
 }

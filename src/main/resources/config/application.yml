@@ -1,20 +1,19 @@
 spring:
   application:
-    name: Sge
+    name: rrm
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/sge
-    username: user_sge
-    password: user_sge
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: rrm_user
+    password: rrm_user
   liquibase:
     change-log: classpath:/config/liquibase/master.xml
     drop-first: true
-
   mail:
     host: smtp.gmail.com
     port: 587
-    username: projeto.formacaobsb@gmail.com
-    password: user_formacao
+    username: 
+    password: 
     properties:
       mail:
         smtp:
@@ -23,10 +22,7 @@ spring:
             enable: true
             required: true
           quitwait: false
-
 application:
   email:
-    endereco-remetente: projeto.formacaobsb@gmail.com
-    nome-remetente: Natal_da_Familia_Cardoso
-
-
+    endereco-remetente: roletarussamanager@gmail.com
+    nome-remetente: Roleta Russa Manager

@@ -4,12 +4,12 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
-    <changeSet id="202210211539" author="Wagner Cardoso">
-        <createTable tableName="PAGAMENTO">
-            <column name="ID" type="INT" remarks="Identificador do pagamento" autoIncrement="true">
+    <changeSet id="202109151627" author="TheoGallo">
+        <createTable tableName="CARGO">
+            <column name="ID" type="INT" remarks="Identificador do cargo" autoIncrement="true">
                 <constraints primaryKey="true" />
             </column>
-            <column name="PAGAMENTO" type="VARCHAR(30)" remarks="Nome do pagamento">
+            <column name="CARGO" type="VARCHAR(30)" remarks="Nome do cargo">
                 <constraints nullable="false" />
             </column>
         </createTable>

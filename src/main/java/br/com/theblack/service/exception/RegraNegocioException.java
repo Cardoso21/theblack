@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.BAD_REQUEST)
 public class RegraNegocioException extends RuntimeException{
-	private static final long serialVersionUID = 1L;
-	
-	public RegraNegocioException(){
+
+    public RegraNegocioException(){
         super();
     }
     public RegraNegocioException(String message){
@@ -20,4 +19,3 @@ public class RegraNegocioException extends RuntimeException{
         super(message, cause);
     }
 }
-

@@ -1,4 +1,4 @@
-package br.com.theblack.service.DTO;
+package br.com.theblack.service.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,5 +8,5 @@ import lombok.Setter;
 public class UsuarioListagemDTO {
     private Long id;
     private String nome;
-    private SelectDTO pagamento;
+    private SelectDTO cargo;
 }
