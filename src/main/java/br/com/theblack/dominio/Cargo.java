@@ -17,7 +17,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "cargo")
 public class Cargo implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

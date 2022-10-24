@@ -19,7 +19,6 @@ public class Evento implements Serializable {
     @Column(name = "id")
     private Long id;
 
-
     @Column(name = "nome")
     private String nome;
 
