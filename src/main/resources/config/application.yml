@@ -8,7 +8,7 @@ spring:
     password: rrm_user
   liquibase:
     change-log: classpath:/config/liquibase/master.xml
-#    drop-first: true
+    drop-first: true
   mail:
     host: smtp.gmail.com
     port: 587

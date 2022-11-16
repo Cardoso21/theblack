@@ -15,7 +15,7 @@
             <column name="DT_NASCIMENTO" type="DATE" remarks="Data de nascimento do usuario">
                 <constraints nullable="false" />
             </column>
-            <column name="EMAIL" type="VARCHAR(60)" remarks="email do usuario">
+            <column name="EMAIL" type="VARCHAR(50)" remarks="email do usuario">
                 <constraints nullable="false" unique="true"/>
             </column>
             <column name="TELEFONE" type="VARCHAR(15)" remarks="numero de telefone com codigo de area" />
